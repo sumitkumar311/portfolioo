@@ -3,15 +3,16 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 // import { BrowserRouter as BrowseRouter } from "react-router-dom";
-import { HashRouter } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
+
 
 import 'remixicon/fonts/remixicon.css';
 
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <HashRouter>
+    <Router>
       <App />
-    </HashRouter>
+    </Router>
   </StrictMode>
 );

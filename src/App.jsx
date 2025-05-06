@@ -12,6 +12,8 @@ import Routing from "./utils/Routing";
 import CustomCursor from "./effects/CustomCursor";
 import { ReactLenis, useLenis } from "lenis/react";
 import useScrollReveal from "./effects/useScrollReveal";
+import Home from "./components/Home";
+import About from "./components/About";
 
 
 
@@ -66,7 +68,12 @@ const App = () => {
       >
         <CustomCursor />
         <Nav />
-        <Routing />
+        <Routes location={location}>
+        <Route path="/" element={
+          <Home/>
+        } />
+        <Route path="/about" element={<About />} />
+      </Routes>
         <footer className="w-full flex px-10 max-md:px-2 justify-between items-center py-6 relative">
           <div className=" flex justify-centeritems-center gap-4">
             <a href="https://github.com/sumitkumar311" target="_blank">
