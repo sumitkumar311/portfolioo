@@ -6,8 +6,9 @@ import MajorProjectItem from "./MajorProjectItem";
 
 const majorProjects = [
   {
-    title: "Resume Builder",
-    img: "https://images.unsplash.com/photo-1733503711059-acde98cd7fdf?w=600",
+    title: "Film inventory",
+    img: "https://images.unsplash.com/photo-1486693128850-a77436e7ba3c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    link: "https://sumitkumar311.github.io/filmInventory/",
   },
   {
     title: "Ecommerce",
@@ -73,7 +74,9 @@ const ProjectSection = () => (
         major project <span className="text-xl medium text-white">upcoming</span>
       </h1>
       {majorProjects.map((proj, i) => (
-        <MajorProjectItem key={i} {...proj} year="2025" />
+        <a key={i} href={proj.link || "#"} target="_blank" rel="noopener noreferrer">
+          <MajorProjectItem {...proj} year="2025" />
+        </a>
       ))}
     </div>
   </>
